@@ -1,4 +1,4 @@
-extends Node
+extends CharacterBody2D
 
 var direction_x: float
 var direction_y: float
