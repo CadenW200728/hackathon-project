@@ -5,14 +5,17 @@
 [ext_resource type="Texture2D" uid="uid://2hog0s1hgpws" path="res://dungeon1.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dreolcvglm62y" path="res://default.png" id="3_epypp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qri1f"]
+size = Vector2(1188, 1184)
+
 [node name="Node2D" type="Node2D" unique_id=16940083]
 script = ExtResource("1_0hol4")
 metadata/_edit_vertical_guides_ = [-361.0, 354.0]
 metadata/_edit_horizontal_guides_ = [325.0]
 
 [node name="Dungeon1" type="Sprite2D" parent="." unique_id=1874720914]
-position = Vector2(-18, -182)
-scale = Vector2(2.2342064, 2.2342057)
+position = Vector2(-2.9999962, -104.00001)
+scale = Vector2(2.4948013, 2.4948006)
 texture = ExtResource("2_0hol4")
 
 [node name="character" type="Node2D" parent="." unique_id=749209028]
@@ -25,3 +28,19 @@ texture = ExtResource("2_0hol4")
 position = Vector2(-38.999992, 3)
 scale = Vector2(2.5, 1.5)
 texture = ExtResource("3_epypp")
+
+[node name="boundaries" type="Node2D" parent="." unique_id=693506134]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="boundaries" unique_id=989011212]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="boundaries/StaticBody2D" unique_id=1820434275]
+position = Vector2(13, 918)
+shape = SubResource("RectangleShape2D_qri1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries/StaticBody2D" unique_id=205056285]
+position = Vector2(1167, -263)
+shape = SubResource("RectangleShape2D_qri1f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="boundaries/StaticBody2D" unique_id=1917187468]
+position = Vector2(-1174, -220)
+shape = SubResource("RectangleShape2D_qri1f")
