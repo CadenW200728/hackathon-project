@@ -33,7 +33,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 8.0
+"speed": 6.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=784741366]
@@ -59,7 +59,7 @@ one_shot = true
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_0hol4")
 animation = &"walk"
-frame_progress = 0.7038939
+frame_progress = 0.118353724
 
 [node name="dashTimer" type="Timer" parent="." unique_id=1841231270]
 wait_time = 0.2
