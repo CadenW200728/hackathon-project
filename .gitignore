@@ -4,6 +4,9 @@
 # Imported asset cache files
 .import/
 
+export.cfg
+export_presets.cfg
+
 # Temporary operating system files
 .DS_Store
 Thumbs.db
