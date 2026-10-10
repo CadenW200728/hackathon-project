@@ -1,1 +1,9 @@
+# Godot 4 editor cache and temporary files
 .godot/
+
+# Imported asset cache files
+.import/
+
+# Temporary operating system files
+.DS_Store
+Thumbs.db
