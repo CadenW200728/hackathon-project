@@ -59,7 +59,7 @@ one_shot = true
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_0hol4")
 animation = &"walk"
-frame_progress = 0.8787988
+frame_progress = 0.7038939
 
 [node name="dashTimer" type="Timer" parent="." unique_id=1841231270]
 wait_time = 0.2

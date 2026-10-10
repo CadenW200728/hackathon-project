@@ -7,6 +7,9 @@ var power: float
 @export var jump_strength := 10
 @export var gravity := 10
 signal shoot(pos: Vector2, dir: Vector2)
+var aim_dir := Vector2.RIGHT
+var using_stick := false
+const MARKER_RADIUS = 110.0
 
 
  
@@ -18,7 +21,7 @@ func get_input():
 	direction_y = Input.get_axis("up", "down")
 	if Input.is_action_just_pressed("shoot") and $reloadTimer.time_left == 0:
 		print("nice")
-		shoot.emit(global_position, get_local_mouse_position().normalized())
+		shoot.emit(global_position, aim_dir)
 		$reloadTimer.start()
 		var tween = get_tree().create_tween()
 		tween.tween_property($Marker, "scale", Vector2(0.4,0.4),0.2)
@@ -48,10 +51,21 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:	
 	update_marker()
-func update_marker():
-	$Marker.position = get_local_mouse_position().normalized() * 110
 	
-
+func update_marker() -> void:
+	var stick := Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+	
+	if stick.length() > 0.2: 
+		aim_dir = stick.normalized()
+		using_stick = true
+	elif not using_stick:
+		aim_dir = get_local_mouse_position().normalized()
+	
+	$Marker.position = aim_dir * MARKER_RADIUS
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		using_stick = false
 	
 #this is a test comment to push
 #I need to test this please work
