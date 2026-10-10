@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="hackathonProject"
-run/main_scene="uid://by2awhslva01c"
+run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 Updatedupstreamrun/main_scenelinerun/main_scene="uid://cxlcnj32hs5uu"

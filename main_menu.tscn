@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d105cnc1np24y" path="res://Dragon BG Placeholder.jpg" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://lh23kg8va22n" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://xv73ipgoom8w" path="res://Bremlin.otf" id="2_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://b3cdjsmphevk5" path="res://14 - Tales of Firelight Town.wav" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7jd8"]
 texture = ExtResource("1_7vrkn")
@@ -114,6 +115,10 @@ theme_override_font_sizes/font_size = 101
 text = "Brick and Murder"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1990670587]
+stream = ExtResource("4_jix8l")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_pressed"]
