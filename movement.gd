@@ -28,7 +28,6 @@ func get_input():
 		speed = speed * 3
 		velocity.x = direction_x * speed
 		velocity.y = direction_y * speed
-		print(direction_x, " ", direction_y, " ", velocity)
 		
 		
 
@@ -39,6 +38,7 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction_x * speed
 	velocity.y = direction_y * speed
 	move_and_slide()
+	print(direction_x, " ", direction_y, " ", velocity)
 	update_marker()
 
 func _process(delta: float) -> void:
