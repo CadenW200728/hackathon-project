@@ -1,37 +1,19 @@
 [gd_scene format=3 uid="uid://by2awhslva01c"]
 
-[ext_resource type="Script" uid="uid://cxmwh4yjjqpkh" path="res://movement.gd" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://chxctrc7dxvle" path="res://shooter.gd" id="1_0hol4"]
-[ext_resource type="Texture2D" uid="uid://b4lyvvqmx47n2" path="res://icon.svg" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://dy1e7tnxl4ofa" path="res://crosshair.png" id="3_epypp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qri1f"]
-size = Vector2(128, 128)
+[ext_resource type="PackedScene" uid="uid://bkxhfmdmtjrg3" path="res://character.tscn" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dreolcvglm62y" path="res://default.png" id="3_epypp"]
 
 [node name="Node2D" type="Node2D" unique_id=16940083]
 script = ExtResource("1_0hol4")
 
 [node name="character" type="Node2D" parent="." unique_id=749209028]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="character" unique_id=176656184]
-script = ExtResource("1_0e48y")
-
-[node name="guy" type="Sprite2D" parent="character/CharacterBody2D" unique_id=1714397742]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_wtcfe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character/CharacterBody2D" unique_id=481846542]
-shape = SubResource("RectangleShape2D_qri1f")
-
-[node name="Camera2D" type="Camera2D" parent="character/CharacterBody2D" unique_id=372821488]
-
-[node name="Marker" type="Sprite2D" parent="character/CharacterBody2D" unique_id=1566802175]
-texture = ExtResource("3_epypp")
-
-[node name="reloadTimer" type="Timer" parent="character/CharacterBody2D" unique_id=678007152]
-wait_time = 0.5
-one_shot = true
+[node name="CharacterBody2D" parent="character" unique_id=784741366 instance=ExtResource("2_0e48y")]
 
 [node name="bullets" type="Node2D" parent="." unique_id=1237551889]
 
-[connection signal="shoot" from="character/CharacterBody2D" to="." method="_on_character_body_2d_shoot"]
+[node name="Default" type="Sprite2D" parent="." unique_id=973091639]
+position = Vector2(-38.999992, 3)
+scale = Vector2(2.5, 1.5)
+texture = ExtResource("3_epypp")
