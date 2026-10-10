@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func setup(pos: Vector2, dir: Vector2) -> void:
 	direction = dir.normalized()
-	global_position = pos + direction * 16
+	global_position = pos + direction * 40
 	rotation = direction.angle()
 	if berry == 1:
 		$Sprite2D.texture = preload(\"res://items/berry.png\")
@@ -46,3 +46,6 @@ texture = ExtResource("1_v7oki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664469778]
 shape = SubResource("CapsuleShape2D_qri1f")
+
+[node name="reloadTimer" type="Timer" parent="." unique_id=1179265412]
+wait_time = 0.5

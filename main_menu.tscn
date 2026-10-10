@@ -26,6 +26,14 @@ bg_color = Color(0.61628073, 0.3377275, 0.1825847, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
 
+[sub_resource type="GDScript" id="GDScript_wa5vi"]
+resource_name = "button"
+script/source = "extends Button
+
+func _ready() -> void:
+	grab_focus()
+"
+
 [node name="MainMenu" type="Control" unique_id=1961246224]
 layout_mode = 3
 anchors_preset = 15
@@ -70,6 +78,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "PLAY"
+script = SubResource("GDScript_wa5vi")
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=1543813136]
 layout_mode = 2
