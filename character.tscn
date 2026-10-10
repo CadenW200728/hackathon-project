@@ -43,6 +43,9 @@ script = ExtResource("1_wa5vi")
 shape = SubResource("RectangleShape2D_qri1f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1513033798]
+limit_left = -361
+limit_right = 354
+limit_bottom = 325
 
 [node name="Marker" type="Sprite2D" parent="." unique_id=1651389519]
 scale = Vector2(1.2, 1.2)
@@ -56,7 +59,7 @@ one_shot = true
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_0hol4")
 animation = &"walk"
-frame_progress = 0.4917703
+frame_progress = 0.8787988
 
 [node name="dashTimer" type="Timer" parent="." unique_id=1841231270]
 wait_time = 0.2
