@@ -33,3 +33,5 @@ wait_time = 0.5
 one_shot = true
 
 [node name="bullets" type="Node2D" parent="." unique_id=1237551889]
+
+[connection signal="shoot" from="character/CharacterBody2D" to="." method="_on_character_body_2d_shoot"]
