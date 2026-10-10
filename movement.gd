@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var direction_x: float
 var direction_y: float
-var speed := 200
+var speed := 50
 var power: float
 @export var jump_strength := 10
 @export var gravity := 10
@@ -28,6 +28,7 @@ func get_input():
 		speed = speed * 3
 		velocity.x = direction_x * speed
 		velocity.y = direction_y * speed
+		print(direction_x, " ", direction_y, " ", velocity)
 		
 		
 
