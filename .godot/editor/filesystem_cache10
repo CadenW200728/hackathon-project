@@ -1,10 +1,12 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791603777
+::res://::1791652754
+bullet.tscn::PackedScene::460920025364402547::1791604977::0::1::::<><><>0<>0<><>::uid://dreolcvglm62y::::res://default.png
+character_body_2d.gd::GDScript::8527202178213646923::1791603468::0::1::::<>CharacterBody2D<><>0<>0<><>::
 crosshair.png::CompressedTexture2D::8897769152460637850::1791603626::1791603622::1::::<><><>0<>0<>a5caca60ac3dfddd3d5ef3e50a00160f<>res://.godot/imported/crosshair.png-b7f9cb2e0fc32a087972fec001d3421e.ctex::
 default.png::CompressedTexture2D::8361599723349190842::1791603777::1791603777::1::::<><><>0<>0<>bca1667dc078341a59850e3252998739<>res://.godot/imported/default.png-2176b7e3dc59817b111a741ce0e9b572.ctex::
 icon.svg::CompressedTexture2D::4446101142273457453::1791594640::1791595901::1::::<><><>0<>0<>5ad3fad451ac050304a64216e0917e66<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1791594818::0::1::::<><><>0<>0<><>::
 movement.gd::GDScript::6413307139181913287::1791603506::0::1::::<>CharacterBody2D<><>0<>0<><>::
-node_2d.tscn::PackedScene::4126730813829212938::1791603724::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://b4lyvvqmx47n2::::res://icon.svg<>uid://dy1e7tnxl4ofa::::res://crosshair.png
-character_body_2d.gd::GDScript::8527202178213646923::1791603468::0::1::::<>CharacterBody2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::4126730813829212938::1791604974::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://chxctrc7dxvle::::res://shooter.gd<>uid://b4lyvvqmx47n2::::res://icon.svg<>uid://dy1e7tnxl4ofa::::res://crosshair.png
+README.md::TextFile::-1::1791594818::0::1::::<><><>0<>0<><>::
+shooter.gd::GDScript::5311800222710962102::1791604457::0::1::::<>Node2D<><>0<>0<><>::
 ::res://state/::1791598193
