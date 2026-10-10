@@ -21,8 +21,8 @@ func get_input():
 		shoot.emit(global_position, get_local_mouse_position().normalized())
 		$reloadTimer.start()
 		var tween = get_tree().create_tween()
-		tween.tween_property($Marker, "scale", Vector2(0.1,0.1),0.2)
-		tween.tween_property($Marker, "scale", Vector2(0.5,0.5),0.4)
+		tween.tween_property($Marker, "scale", Vector2(0.4,0.4),0.2)
+		tween.tween_property($Marker, "scale", Vector2(1.2,1.2),0.4)
 	if Input.is_action_just_pressed("dash"):
 		$dashTimer.start()
 		speed = speed * 3
