@@ -56,4 +56,4 @@ func update_marker():
 #this is a test comment to push
 #I need to test this please work
 func _on_dash_timer_timeout() -> void:
-	speed = 50
+	speed = 100

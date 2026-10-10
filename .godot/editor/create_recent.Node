@@ -1,3 +1,4 @@
+Timer
 AnimatedSprite2D
 Label
 Panel
@@ -9,5 +10,4 @@ Sprite2D
 Area2D
 CharacterBody2D
 Node2D
-Timer
 Camera2D
