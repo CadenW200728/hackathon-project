@@ -1,18 +1,43 @@
 [gd_scene format=3 uid="uid://bkxhfmdmtjrg3"]
 
 [ext_resource type="Script" uid="uid://cxmwh4yjjqpkh" path="res://movement.gd" id="1_wa5vi"]
-[ext_resource type="Texture2D" uid="uid://b4lyvvqmx47n2" path="res://icon.svg" id="2_wfnr8"]
 [ext_resource type="Texture2D" uid="uid://dy1e7tnxl4ofa" path="res://crosshair.png" id="3_px5sl"]
+[ext_resource type="Texture2D" uid="uid://bgrna006mqexc" path="res://spritesheetMain.png" id="4_wfnr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qri1f"]
 size = Vector2(38, 38)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_px5sl"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(1754, 0, 1754, 1240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qfo5"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(0, 0, 1754, 1240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxww1"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(0, 1240, 1754, 1240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hol4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px5sl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qfo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxww1")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=784741366]
 script = ExtResource("1_wa5vi")
-
-[node name="guy" type="Sprite2D" parent="." unique_id=49867608]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_wfnr8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107018999]
 shape = SubResource("RectangleShape2D_qri1f")
@@ -20,6 +45,7 @@ shape = SubResource("RectangleShape2D_qri1f")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1513033798]
 
 [node name="Marker" type="Sprite2D" parent="." unique_id=1651389519]
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_px5sl")
 
 [node name="reloadTimer" type="Timer" parent="." unique_id=1283692172]
@@ -27,3 +53,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1988877011]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_0hol4")
+animation = &"walk"
+frame_progress = 0.17150465
