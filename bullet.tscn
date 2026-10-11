@@ -7,8 +7,8 @@ script/source = "extends Area2D
 
 var direction: Vector2
 var berry = 0
-var lenny = 0
-var mirror = 1
+var lenny = 1
+var mirror = 0
 var scaleOs = 0
 
 func _ready() -> void:
@@ -21,17 +21,33 @@ func setup(pos: Vector2, dir: Vector2) -> void:
 	rotation = direction.angle()
 	if berry == 1:
 		$Sprite2D.texture = preload(\"res://items/berry.png\")
+		berry = 1
+		lenny = 0
+		mirror = 0
+		scaleOs = 0
 	if lenny == 1:
 		$Sprite2D.texture = preload(\"res://items/lennyHat.png\")
+		berry = 0
+		lenny = 1
+		mirror = 0
+		scaleOs = 0
 	if mirror == 1:
 		$Sprite2D.texture = preload(\"res://items/mirror.png\")
+		berry = 0
+		lenny = 0
+		mirror = 1
+		scaleOs = 0
 	if scaleOs == 1:
 		$Sprite2D.texture = preload(\"res://items/scaleOs.png\")
+		berry = 0
+		lenny = 0
+		mirror = 0
+		scaleOs = 1
 		
 	
 
 func _physics_process(delta: float) -> void:
-	global_position += direction * 290 * delta
+	global_position += direction * 280 * delta
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qri1f"]

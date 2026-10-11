@@ -46,9 +46,6 @@ func _ready() -> void:
 	print(colorRng.randi_range(0,3))
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln6a5"]
-size = Vector2(38, 38)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_30rnt"]
 atlas = ExtResource("1_1v8mu")
 region = Rect2(1754, 0, 1754, 1240)
@@ -182,14 +179,18 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln6a5"]
+size = Vector2(88, 128)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2082198455]
 script = SubResource("GDScript_qri1f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=281234360]
-shape = SubResource("RectangleShape2D_ln6a5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974850952]
 position = Vector2(0, 1.9999998)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wkweg")
 animation = &"walkEnemyRed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=281234360]
+position = Vector2(-17, 2)
+shape = SubResource("RectangleShape2D_ln6a5")
