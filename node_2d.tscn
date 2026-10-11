@@ -27,6 +27,13 @@ func _on_timer_timeout() -> void:
 	get_parent().add_child(enemy)
 "
 
+[sub_resource type="Theme" id="Theme_q6r6c"]
+
+[sub_resource type="GDScript" id="GDScript_kdubu"]
+resource_name = "berryButton"
+script/source = "extends Button
+"
+
 [node name="Node2D" type="Node2D" unique_id=16940083]
 script = ExtResource("1_0hol4")
 metadata/_edit_vertical_guides_ = [-361.0, 354.0]
@@ -71,3 +78,41 @@ script = SubResource("GDScript_qri1f")
 [node name="Timer" type="Timer" parent="enemySpawner" unique_id=1317644149]
 wait_time = 3.5
 autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=2063089472]
+offset_left = -171.0
+offset_top = 157.0
+offset_right = -120.0
+offset_bottom = 188.0
+theme = SubResource("Theme_q6r6c")
+text = "Berry
+"
+script = SubResource("GDScript_kdubu")
+
+[node name="Button2" type="Button" parent="." unique_id=1550847125]
+offset_left = -102.0
+offset_top = 157.0
+offset_right = -66.0
+offset_bottom = 188.0
+theme = SubResource("Theme_q6r6c")
+text = "Hat
+"
+
+[node name="Button3" type="Button" parent="." unique_id=1757101478]
+offset_left = -43.0
+offset_top = 157.0
+offset_right = 65.0
+offset_bottom = 188.0
+theme = SubResource("Theme_q6r6c")
+text = "Magic Mirror
+"
+
+[node name="Button4" type="Button" parent="." unique_id=68118072]
+offset_left = 94.0
+offset_top = 157.0
+offset_right = 152.0
+offset_bottom = 188.0
+theme = SubResource("Theme_q6r6c")
+text = "Cereal
+"
+icon_alignment = 1

@@ -1,3 +1,4 @@
+Button
 Timer
 Node2D
 CharacterBody2D
@@ -8,7 +9,6 @@ AnimatedSprite2D
 Label
 Panel
 VBoxContainer
-Button
 MarginContainer
 Sprite2D
 Area2D

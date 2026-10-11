@@ -17,6 +17,10 @@ config/icon="res://icon.svg"
 Updatedupstreamrun/main_scenelinerun/main_scene="uid://cxlcnj32hs5uu"
 Stashedchangesconfig/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+Global1="*uid://b1v7i1bet8k2x"
+
 [display]
 
 window/stretch/mode="canvas_items"

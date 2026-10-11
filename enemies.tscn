@@ -6,44 +6,29 @@
 [ext_resource type="Texture2D" uid="uid://bs2wjtxindkab" path="res://spritesheetRed.png" id="4_jwg6e"]
 [ext_resource type="Texture2D" uid="uid://bgrna006mqexc" path="res://spritesheetMain.png" id="5_pg2g7"]
 
-[sub_resource type="GDScript" id="GDScript_qri1f"]
-resource_name = "enemies"
+[sub_resource type="GDScript" id="GDScript_104sf"]
+resource_name = "enemyMovement"
 script/source = "extends CharacterBody2D
 
-var colorRng = RandomNumberGenerator.new()
-var color = 0
-var green = 0
-var red = 0
-var purple = 0
-var orange = 0
+@export var speed: float = 40.0
+
+var direction := Vector2.ZERO
+var timer := 0.0
 
 func _ready() -> void:
-	color = colorRng.randi_range(0,3)
-	if color == 0:
-		$AnimatedSprite2D.play(\"walkEnemyGreen\")
-		green = 1
-		red = 0
-		purple = 0
-		orange = 0
-	if color == 1:
-		$AnimatedSprite2D.play(\"walkEnemyOrange\")
-		orange = 1
-		green = 0
-		red = 0
-		purple = 0
-	if color == 2:
-		$AnimatedSprite2D.play(\"walkEnemyPurple\")
-		purple = 1
-		orange = 0
-		green = 0
-		red = 0
-	if color == 3:
-		$AnimatedSprite2D.play(\"walkEnemyRed\")
-		purple = 0
-		orange = 0
-		green = 0
-		red = 1
-	print(colorRng.randi_range(0,3))
+	_pick_new_direction()
+
+func _physics_process(delta: float) -> void:
+	timer -= delta
+	if timer <= 0.0 or get_slide_collision_count() > 0:
+		_pick_new_direction()
+
+	velocity = direction * speed
+	move_and_slide()
+
+func _pick_new_direction() -> void:
+	direction = Vector2.RIGHT.rotated(randf() * TAU)
+	timer = randf_range(1.0, 3.0)
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30rnt"]
@@ -183,7 +168,7 @@ animations = [{
 size = Vector2(88, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2082198455]
-script = SubResource("GDScript_qri1f")
+script = SubResource("GDScript_104sf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974850952]
 position = Vector2(0, 1.9999998)

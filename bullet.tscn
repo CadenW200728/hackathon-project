@@ -19,33 +19,27 @@ func setup(pos: Vector2, dir: Vector2) -> void:
 	direction = dir.normalized()
 	global_position = pos + direction * 40
 	rotation = direction.angle()
-	if berry == 1:
-		$Sprite2D.texture = preload(\"res://items/berry.png\")
-		berry = 1
-		lenny = 0
-		mirror = 0
-		scaleOs = 0
-	if lenny == 1:
-		$Sprite2D.texture = preload(\"res://items/lennyHat.png\")
-		berry = 0
-		lenny = 1
-		mirror = 0
-		scaleOs = 0
-	if mirror == 1:
-		$Sprite2D.texture = preload(\"res://items/mirror.png\")
-		berry = 0
-		lenny = 0
-		mirror = 1
-		scaleOs = 0
-	if scaleOs == 1:
-		$Sprite2D.texture = preload(\"res://items/scaleOs.png\")
-		berry = 0
-		lenny = 0
-		mirror = 0
-		scaleOs = 1
-		
-	
 
+	# reset everything to 0 first
+	berry = 0
+	lenny = 0
+	mirror = 0
+	scaleOs = 0
+
+	# then set only the chosen one to 1 and swap the picture
+	match Global1.selected_item:
+		\"berry\":
+			berry = 1
+			$Sprite2D.texture = preload(\"res://items/berry.png\")
+		\"lenny\":
+			lenny = 1
+			$Sprite2D.texture = preload(\"res://items/lennyHat.png\")
+		\"mirror\":
+			mirror = 1
+			$Sprite2D.texture = preload(\"res://items/mirror.png\")
+		\"scaleOs\":
+			scaleOs = 1
+			$Sprite2D.texture = preload(\"res://items/scaleOs.png\")
 func _physics_process(delta: float) -> void:
 	global_position += direction * 280 * delta
 "
