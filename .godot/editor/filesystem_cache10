@@ -1,20 +1,21 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791679886
+::res://::1791682942
 05 - Battle 1.mp3::AudioStreamMP3::4575875291072222740::1791672305::1791672305::1::::<><><>0<>0<>096044edbadf174d6b0ce6af179f8a95<>res://.godot/imported/05 - Battle 1.mp3-508eead63af709e55cc2243f45285cfe.mp3str::
 14 - Tales of Firelight Town.wav::AudioStreamWAV::4356036248838593974::1791672879::1791672913::1::::<><><>0<>0<>0ef3753fd0d934c3253a55fa2518fab1<>res://.godot/imported/14 - Tales of Firelight Town.wav-690e99a92ee34975b64319e997e22972.sample::
 Bremlin.otf::FontFile::1659688726158617976::1791660110::1791660163::1::::<><><>0<>0<>c8920de10bc947ae7c12ed39fdda97dd<>res://.godot/imported/Bremlin.otf-16adf9ccae227efd4f4a824980cd6bad.fontdata::
-bullet.tscn::PackedScene::460920025364402547::1791674506::0::1::::<><><>0<>0<><>::uid://dreolcvglm62y::::res://default.png
-character.tscn::PackedScene::3136224391821293540::1791676102::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://dy1e7tnxl4ofa::::res://crosshair.png<>uid://bgrna006mqexc::::res://spritesheetMain.png
+bullet.tscn::PackedScene::460920025364402547::1791679958::0::1::::<><><>0<>0<><>::uid://dreolcvglm62y::::res://default.png
+character.tscn::PackedScene::3136224391821293540::1791680052::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://dy1e7tnxl4ofa::::res://crosshair.png<>uid://bgrna006mqexc::::res://spritesheetMain.png
 character_body_2d.gd::GDScript::8527202178213646923::1791603468::0::1::::<>CharacterBody2D<><>0<>0<><>::
 crosshair.png::CompressedTexture2D::8897769152460637850::1791603626::1791603622::1::::<><><>0<>0<>a5caca60ac3dfddd3d5ef3e50a00160f<>res://.godot/imported/crosshair.png-b7f9cb2e0fc32a087972fec001d3421e.ctex::
 default.png::CompressedTexture2D::8361599723349190842::1791603777::1791603777::1::::<><><>0<>0<>bca1667dc078341a59850e3252998739<>res://.godot/imported/default.png-2176b7e3dc59817b111a741ce0e9b572.ctex::
 Dragon BG Placeholder.jpg::CompressedTexture2D::9037607197982919142::1791660110::1791660163::1::::<><><>0<>0<>445628ff51c8cea86ea6ae07cf5be8bb<>res://.godot/imported/Dragon BG Placeholder.jpg-70eec1abfdf0aaea6f8da23e95ec9b17.ctex::
 dungeon1.png::CompressedTexture2D::1910411517248615066::1791673039::1791673039::1::::<><><>0<>0<>187453a4d55737187965fe8ae05a4ce5<>res://.godot/imported/dungeon1.png-ba3d7653a5d9fb08088d58c823fee03f.ctex::
+enemies.tscn::PackedScene::2006551783168682547::1791680600::0::1::::<><><>0<>0<><>::uid://bhiqklhkxnm6t::::res://spritesheetGreen.png<>uid://dlpxy68duxfa4::::res://spritesheetOrange.png<>uid://dm0c1wa0uetl3::::res://spritesheetPurple.png<>uid://bs2wjtxindkab::::res://spritesheetRed.png<>uid://bgrna006mqexc::::res://spritesheetMain.png
 icon.svg::CompressedTexture2D::4446101142273457453::1791594640::1791672913::1::::<><><>0<>0<>5ad3fad451ac050304a64216e0917e66<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main_menu.gd::GDScript::788217821360598399::1791660110::0::1::::<>Control<><>0<>0<><>::
 main_menu.tscn::PackedScene::6410038092863429652::1791674200::0::1::::<><><>0<>0<><>::uid://d105cnc1np24y::::res://Dragon BG Placeholder.jpg<>uid://lh23kg8va22n::::res://main_menu.gd<>uid://xv73ipgoom8w::::res://Bremlin.otf<>uid://b3cdjsmphevk5::::res://14 - Tales of Firelight Town.wav
-movement.gd::GDScript::6413307139181913287::1791674427::0::1::::<>CharacterBody2D<><>0<>0<><>::
-node_2d.tscn::PackedScene::4126730813829212938::1791675950::0::1::::<><><>0<>0<><>::uid://chxctrc7dxvle::::res://shooter.gd<>uid://bkxhfmdmtjrg3::::res://character.tscn<>uid://2hog0s1hgpws::::res://dungeon1.png<>uid://dreolcvglm62y::::res://default.png
+movement.gd::GDScript::6413307139181913287::1791680142::0::1::::<>CharacterBody2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::4126730813829212938::1791680043::0::1::::<><><>0<>0<><>::uid://chxctrc7dxvle::::res://shooter.gd<>uid://bkxhfmdmtjrg3::::res://character.tscn<>uid://2hog0s1hgpws::::res://dungeon1.png<>uid://b6gt86d0pdp8o::::res://05 - Battle 1.mp3
 README.md::TextFile::-1::1791594818::0::1::::<><><>0<>0<><>::
 shooter.gd::GDScript::5311800222710962102::1791654882::0::1::::<>Node2D<><>0<>0<><>::
 spritesheetGreen.png::CompressedTexture2D::2895247530071216697::1791656283::1791656284::1::::<><><>0<>0<>6ee40ed5cee85cfc3c3841f6742a7b7c<>res://.godot/imported/spritesheetGreen.png-f7d2215995bde18bbd276394c4719b5e.ctex::
