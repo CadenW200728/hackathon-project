@@ -6,17 +6,52 @@
 [ext_resource type="Texture2D" uid="uid://bs2wjtxindkab" path="res://spritesheetRed.png" id="4_jwg6e"]
 [ext_resource type="Texture2D" uid="uid://bgrna006mqexc" path="res://spritesheetMain.png" id="5_pg2g7"]
 
-[sub_resource type="GDScript" id="GDScript_104sf"]
+[sub_resource type="GDScript" id="GDScript_3ek0f"]
 resource_name = "enemyMovement"
 script/source = "extends CharacterBody2D
+
+
+const WEAKNESS = {
+	0: \"berry\",    # green
+	1: \"lenny\",    # orange
+	2: \"mirror\",   # purple
+	3: \"scaleOs\",  # red
+}
+var colorRng = RandomNumberGenerator.new()
+var color = 0
+
+
+
+
+func _ready() -> void:
+	color = colorRng.randi_range(0, 3)
+	if color == 0:
+		$AnimatedSprite2D.play(\"walkEnemyGreen\")
+	elif color == 1:
+		$AnimatedSprite2D.play(\"walkEnemyOrange\")
+	elif color == 2:
+		$AnimatedSprite2D.play(\"walkEnemyPurple\")
+	elif color == 3:
+		$AnimatedSprite2D.play(\"walkEnemyRed\")
+	print(color)
+	_pick_new_direction()
+
+
+
+
+
+func receive_item(item: String) -> void:
+	print(\"enemy color: \", color, \" needs: \", WEAKNESS[color], \" got: \", item)
+	if item == WEAKNESS[color]:
+		queue_free()
 
 @export var speed: float = 40.0
 
 var direction := Vector2.ZERO
 var timer := 0.0
 
-func _ready() -> void:
-	_pick_new_direction()
+
+
 
 func _physics_process(delta: float) -> void:
 	timer -= delta
@@ -168,7 +203,7 @@ animations = [{
 size = Vector2(88, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2082198455]
-script = SubResource("GDScript_104sf")
+script = SubResource("GDScript_3ek0f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974850952]
 position = Vector2(0, 1.9999998)

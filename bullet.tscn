@@ -4,7 +4,7 @@
 
 [sub_resource type="GDScript" id="GDScript_q6r6c"]
 script/source = "extends Area2D
-
+var item = \"\"
 var direction: Vector2
 var berry = 0
 var lenny = 1
@@ -12,8 +12,16 @@ var mirror = 0
 var scaleOs = 0
 
 func _ready() -> void:
+	body_entered.connect(_on_body_entered) 
 	var tween = get_tree().create_tween()
 	tween.tween_property($Sprite2D, \"scale\", Vector2(0.3, 0.3), 0.1)
+
+func _on_body_entered(body: Node2D) -> void:
+	print(\"hit \", body.get_path(), \" | script: \", body.get_script(), \" | has receive_item: \", body.has_method(\"receive_item\"))
+	if body.has_method(\"receive_item\"):
+		body.receive_item(item)
+		queue_free()
+		
 
 func setup(pos: Vector2, dir: Vector2) -> void:
 	direction = dir.normalized()
@@ -25,6 +33,7 @@ func setup(pos: Vector2, dir: Vector2) -> void:
 	lenny = 0
 	mirror = 0
 	scaleOs = 0
+	item = Global1.selected_item
 
 	# then set only the chosen one to 1 and swap the picture
 	match Global1.selected_item:

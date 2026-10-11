@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame = 1
-	print(direction_x, " ", direction_y, " ", velocity)
+
 	update_marker()
 
 func _process(delta: float) -> void:	

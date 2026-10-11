@@ -79,40 +79,52 @@ script = SubResource("GDScript_qri1f")
 wait_time = 3.5
 autostart = true
 
-[node name="Button" type="Button" parent="." unique_id=2063089472]
-offset_left = -171.0
-offset_top = 157.0
-offset_right = -120.0
-offset_bottom = 188.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1174871728]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=2063089472]
+offset_left = 216.0
+offset_top = 513.0
+offset_right = 350.0
+offset_bottom = 544.0
 theme = SubResource("Theme_q6r6c")
-text = "Berry
+text = "Berry (d-pad up)
 "
 script = SubResource("GDScript_kdubu")
 
-[node name="Button2" type="Button" parent="." unique_id=1550847125]
-offset_left = -102.0
-offset_top = 157.0
-offset_right = -66.0
-offset_bottom = 188.0
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1550847125]
+offset_left = 386.0
+offset_top = 514.0
+offset_right = 522.0
+offset_bottom = 545.0
 theme = SubResource("Theme_q6r6c")
-text = "Hat
+text = "Hat (d-pad right)
 "
 
-[node name="Button3" type="Button" parent="." unique_id=1757101478]
-offset_left = -43.0
-offset_top = 157.0
-offset_right = 65.0
-offset_bottom = 188.0
+[node name="Button3" type="Button" parent="CanvasLayer" unique_id=1757101478]
+offset_left = 561.0
+offset_top = 514.0
+offset_right = 774.0
+offset_bottom = 545.0
 theme = SubResource("Theme_q6r6c")
-text = "Magic Mirror
+text = "Magic Mirror (d-pad down)
 "
 
-[node name="Button4" type="Button" parent="." unique_id=68118072]
-offset_left = 94.0
-offset_top = 157.0
-offset_right = 152.0
-offset_bottom = 188.0
+[node name="Button4" type="Button" parent="CanvasLayer" unique_id=68118072]
+offset_left = 816.0
+offset_top = 515.0
+offset_right = 962.0
+offset_bottom = 546.0
 theme = SubResource("Theme_q6r6c")
-text = "Cereal
+text = "Cereal (d-pad left)
 "
 icon_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1856852258]
+offset_left = 748.0
+offset_top = 73.0
+offset_right = 858.0
+offset_bottom = 174.0
+text = "berry: green
+hat: orange
+mirror: purple
+cereal: red"

@@ -1,3 +1,5 @@
+Label
+CanvasLayer
 Button
 Timer
 Node2D
@@ -6,9 +8,7 @@ AudioStreamPlayer2D
 StaticBody2D
 CollisionShape2D
 AnimatedSprite2D
-Label
 Panel
 VBoxContainer
 MarginContainer
 Sprite2D
-Area2D
