@@ -3,15 +3,34 @@
 [ext_resource type="Script" uid="uid://chxctrc7dxvle" path="res://shooter.gd" id="1_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bkxhfmdmtjrg3" path="res://character.tscn" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://2hog0s1hgpws" path="res://dungeon1.png" id="2_0hol4"]
+[ext_resource type="PackedScene" uid="uid://3t8u5uqkikbj" path="res://enemies.tscn" id="5_kdubu"]
 [ext_resource type="AudioStream" uid="uid://b6gt86d0pdp8o" path="res://05 - Battle 1.mp3" id="5_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qri1f"]
 size = Vector2(1188, 1184)
 
+[sub_resource type="GDScript" id="GDScript_qri1f"]
+resource_name = "spawner"
+script/source = "extends Node2D
+
+var enemy_scene = preload(\"res://enemies.tscn\") 
+@export var spawn_rng_range: float = 354.0  
+
+var rng = RandomNumberGenerator.new()
+
+func _ready() -> void:
+	$Timer.timeout.connect(_on_timer_timeout)
+
+func _on_timer_timeout() -> void:
+	var enemy = enemy_scene.instantiate()
+	enemy.position = global_position + Vector2(rng.randf_range(-361, 354.0),rng.randf_range(325, -454))
+	get_parent().add_child(enemy)
+"
+
 [node name="Node2D" type="Node2D" unique_id=16940083]
 script = ExtResource("1_0hol4")
 metadata/_edit_vertical_guides_ = [-361.0, 354.0]
-metadata/_edit_horizontal_guides_ = [325.0]
+metadata/_edit_horizontal_guides_ = [325.0, -454.0]
 
 [node name="Dungeon1" type="Sprite2D" parent="." unique_id=1874720914]
 position = Vector2(-2.9999962, -104.00001)
@@ -43,3 +62,12 @@ shape = SubResource("RectangleShape2D_qri1f")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1809772834]
 stream = ExtResource("5_q6r6c")
 autoplay = true
+
+[node name="CharacterBody2D" parent="." unique_id=2082198455 instance=ExtResource("5_kdubu")]
+
+[node name="enemySpawner" type="Node2D" parent="." unique_id=1646339617]
+script = SubResource("GDScript_qri1f")
+
+[node name="Timer" type="Timer" parent="enemySpawner" unique_id=1317644149]
+wait_time = 2.0
+autostart = true
