@@ -1,10 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791676032
+::res://::1791679886
 05 - Battle 1.mp3::AudioStreamMP3::4575875291072222740::1791672305::1791672305::1::::<><><>0<>0<>096044edbadf174d6b0ce6af179f8a95<>res://.godot/imported/05 - Battle 1.mp3-508eead63af709e55cc2243f45285cfe.mp3str::
 14 - Tales of Firelight Town.wav::AudioStreamWAV::4356036248838593974::1791672879::1791672913::1::::<><><>0<>0<>0ef3753fd0d934c3253a55fa2518fab1<>res://.godot/imported/14 - Tales of Firelight Town.wav-690e99a92ee34975b64319e997e22972.sample::
 Bremlin.otf::FontFile::1659688726158617976::1791660110::1791660163::1::::<><><>0<>0<>c8920de10bc947ae7c12ed39fdda97dd<>res://.godot/imported/Bremlin.otf-16adf9ccae227efd4f4a824980cd6bad.fontdata::
 bullet.tscn::PackedScene::460920025364402547::1791674506::0::1::::<><><>0<>0<><>::uid://dreolcvglm62y::::res://default.png
-character.tscn::PackedScene::3136224391821293540::1791673996::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://dy1e7tnxl4ofa::::res://crosshair.png<>uid://bgrna006mqexc::::res://spritesheetMain.png
+character.tscn::PackedScene::3136224391821293540::1791676102::0::1::::<><><>0<>0<><>::uid://cxmwh4yjjqpkh::::res://movement.gd<>uid://dy1e7tnxl4ofa::::res://crosshair.png<>uid://bgrna006mqexc::::res://spritesheetMain.png
 character_body_2d.gd::GDScript::8527202178213646923::1791603468::0::1::::<>CharacterBody2D<><>0<>0<><>::
 crosshair.png::CompressedTexture2D::8897769152460637850::1791603626::1791603622::1::::<><><>0<>0<>a5caca60ac3dfddd3d5ef3e50a00160f<>res://.godot/imported/crosshair.png-b7f9cb2e0fc32a087972fec001d3421e.ctex::
 default.png::CompressedTexture2D::8361599723349190842::1791603777::1791603777::1::::<><><>0<>0<>bca1667dc078341a59850e3252998739<>res://.godot/imported/default.png-2176b7e3dc59817b111a741ce0e9b572.ctex::

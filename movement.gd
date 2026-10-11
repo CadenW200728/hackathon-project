@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var direction_x: float
 var direction_y: float
-var speed := 90
+var speed := 100
 var power: float
 @export var jump_strength := 10
 @export var gravity := 10
@@ -31,6 +31,7 @@ func get_input():
 		speed = speed * 3
 		velocity.x = direction_x * speed
 		velocity.y = direction_y * speed
+		$AnimatedSprite2D.frame = 0
 		
 		
 
@@ -70,4 +71,4 @@ func _input(event: InputEvent) -> void:
 #this is a test comment to push
 #I need to test this please work
 func _on_dash_timer_timeout() -> void:
-	speed = 165
+	speed = 175

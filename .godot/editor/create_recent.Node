@@ -1,3 +1,5 @@
+CharacterBody2D
+AudioStreamPlayer2D
 Timer
 StaticBody2D
 CollisionShape2D
@@ -10,5 +12,3 @@ Button
 MarginContainer
 Sprite2D
 Area2D
-CharacterBody2D
-Camera2D

@@ -31,7 +31,7 @@ func setup(pos: Vector2, dir: Vector2) -> void:
 	
 
 func _physics_process(delta: float) -> void:
-	global_position += direction * 120 * delta
+	global_position += direction * 290 * delta
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qri1f"]
@@ -48,4 +48,4 @@ texture = ExtResource("1_v7oki")
 shape = SubResource("CapsuleShape2D_qri1f")
 
 [node name="reloadTimer" type="Timer" parent="." unique_id=1179265412]
-wait_time = 0.5
+wait_time = 0.3
