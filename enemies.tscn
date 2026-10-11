@@ -83,7 +83,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkEnemyGreen",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -97,7 +97,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkEnemyOrange",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -111,7 +111,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkEnemyPurple",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -125,7 +125,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkEnemyRed",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,7 +139,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walkPlayer",
-"speed": 8.0
+"speed": 7.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2082198455]
@@ -148,7 +148,8 @@ animations = [{
 shape = SubResource("RectangleShape2D_ln6a5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974850952]
+position = Vector2(0, 1.9999998)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wkweg")
 animation = &"walkEnemyGreen"
-frame_progress = 0.50688875
+frame_progress = 0.9837298
